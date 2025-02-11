@@ -102,7 +102,7 @@ html, body {
     right:0px;
     font-size: 1.5em;
     font-family: 'Inter', sans-serif;
-    padding: 0 10px 10px 10px;
+    padding: 10px;
     background-color: var(--Yellow);
     color: var(--Dark-gray);
     border-bottom-right-radius: 20px;
