@@ -89,7 +89,7 @@ html, body {
   }
   
   h1 {
-    font-size: 3em; 
+    font-size: 2.5em; 
     color: var(--White);
     line-height: 1.15;
     min-width: 100%;
@@ -166,12 +166,12 @@ html, body {
   #services, #pricing{
     padding: 1em;
   }
-  #services > section {
-    background-color: var(--White);      /* White card */
-    border-radius: 20px;         /* Medium border radius */
-    padding: 1em;                /* Inner spacing for card content */
-    margin: 1em 0;
-}
+  #services section section {
+    background-color: var(--White);
+    border-radius: 20px;
+    padding: 1em;
+    margin: 1em;
+  }
 #why-choose-us {
     background-color: var(--Pink);
     max-width: 100%;
@@ -180,21 +180,21 @@ html, body {
 
   #why-choose-us ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-gap: 1em;                        /* spacing between items */
-    list-style: none;                     /* remove default bullets */
-    margin: 0;                            /* reset default margins */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em; 
+    list-style: none; 
+    margin: 0;  
     padding: 0;
   }
   #why-choose-us ul li {
-    color: var(--Dark-gray);  /* text color so it’s readable on lighter backgrounds */
-    text-align: center;       /* center text horizontally */
-    font-weight: bold;        /* optional, for emphasis */
-    border-radius: 10px;      /* small border radius */
-    display: flex;            /* allow center alignment in both directions */
+    color: var(--Dark-gray); 
+    text-align: center; 
+    font-weight: bold; 
+    border-radius: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em;             /* space inside each box */
+    padding: 1em;
   }
   #why-choose-us ul li:nth-child(1) {
     background-color: var(--Teal);
@@ -213,7 +213,6 @@ html, body {
     margin: 1em auto;
   }
   
-  /* Table Header Cells */
   #pricing table th {
     background-color: var(--Yellow);
     color: var(--Dark-gray);
@@ -221,7 +220,6 @@ html, body {
     padding: 0.5em;
   }
   
-  /* Table Body Cells */
   #pricing table td {
     background-color: var(--White);
     color: var(--Dark-gray);
@@ -275,11 +273,68 @@ html, body {
     font-weight: 500;  
   }
 
-  
 }
+
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 @media (min-width: 620px) {
+  h1 {
+    font-size: 3em;
+  }
+  .more-text {
+    display: inline;
+  }
+
+#One-on-One {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
 }
+#group-coaching {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+#personal-development {
+  grid-column: 1;
+}
+
+#career-coaching {
+  grid-column: 2;
+}
+
+#relationship-coaching {
+  grid-column: 1 / -1; 
+}
+
+#why-choose-us ul {
+  display: flex;
+  justify-content: center;  
+  gap: 1.5em; 
+  padding: 0;
+  list-style: none;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  text-align: center;
+}
+
+.pricing-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: left; 
+
+}
+.First-step-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+}
+
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media (min-width: 950px) {
 }
