@@ -1,0 +1,289 @@
+/* -------------------- CSS BY NAME -------------------------------------- */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+/*-------------------- CSS RESET --------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+
+:root {
+    font-family: "Inter", serif;
+    font-size: 1.25em;
+    --Teal: #4CA7C0;
+    --Purple: #484FB7;
+    --Lavender: #6B8FE7;
+    --Yellow: #E9BB57; 
+    --Pink:#D9526F;
+    --Dark-gray:#1E1E1E; 
+    --White:#ffffff; 
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media (min-width: 450px) {
+    body {
+    min-width: 428px;
+} 
+html {
+    background-color:  var(--Purple);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--Dark-gray);  
+  }
+
+  h1, h2 {
+    font-family: 'Kavoon';
+  }
+  
+  h1 {
+    font-size: 3em; 
+    color: var(--White);
+    line-height: 1.15;
+    min-width: 100%;
+  }
+
+  nav h2 {
+    display: flex;
+    position: fixed;
+    top:0px;
+    right:0px;
+    font-size: 1.5em;
+    font-family: 'Inter', sans-serif;
+    padding: 0 10px 10px 10px;
+    background-color: var(--Yellow);
+    color: var(--Dark-gray);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 3;
+    font-style: italic;
+    font-weight: bold;
+  }
+  nav ul {
+    display: none;
+  }
+  h2 {
+    font-size: 2em;
+    color: var(--White);
+  }
+
+  h3 {
+    font-size: 1.5em;
+    color: var(--Yellow);
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-size: 1.15em;
+    color: var(--Purple);
+    font-weight: bold;
+  }
+
+  h1 {
+    position: relative;  
+    background-color: var(--Lavender);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 1em;  
+    text-align: center;
+  }
+ 
+  header h1 {
+    position: relative;
+    z-index: 2; 
+  }
+
+  h1 + p {
+  position: relative;
+  z-index: 1; 
+  background-color: var(--Pink);
+  color: var(--White);
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  max-width: 90%;
+  text-align: center;
+  font-style: italic;
+  
+  }
+
+  .more-text {
+    display: none;
+  }
+  #services, #pricing{
+    padding: 1em;
+  }
+  #services > section {
+    background-color: var(--White);      /* White card */
+    border-radius: 20px;         /* Medium border radius */
+    padding: 1em;                /* Inner spacing for card content */
+    margin: 1em 0;
+}
+#why-choose-us {
+    background-color: var(--Pink);
+    max-width: 100%;
+    padding:1em;
+}
+
+  #why-choose-us ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 1em;                        /* spacing between items */
+    list-style: none;                     /* remove default bullets */
+    margin: 0;                            /* reset default margins */
+    padding: 0;
+  }
+  #why-choose-us ul li {
+    color: var(--Dark-gray);  /* text color so it’s readable on lighter backgrounds */
+    text-align: center;       /* center text horizontally */
+    font-weight: bold;        /* optional, for emphasis */
+    border-radius: 10px;      /* small border radius */
+    display: flex;            /* allow center alignment in both directions */
+    align-items: center;
+    justify-content: center;
+    padding: 1em;             /* space inside each box */
+  }
+  #why-choose-us ul li:nth-child(1) {
+    background-color: var(--Teal);
+  }
+  #why-choose-us ul li:nth-child(2) {
+    background-color: var(--Lavender);
+  }
+  #why-choose-us ul li:nth-child(3) {
+    background-color: var(--Yellow);
+  }
+  #why-choose-us ul li:nth-child(4) {
+    background-color: var(--White);
+  }
+  #pricing table {
+    border-collapse: collapse; 
+    margin: 1em auto;
+  }
+  
+  /* Table Header Cells */
+  #pricing table th {
+    background-color: var(--Yellow);
+    color: var(--Dark-gray);
+    font-weight: bold; 
+    padding: 0.5em;
+  }
+  
+  /* Table Body Cells */
+  #pricing table td {
+    background-color: var(--White);
+    color: var(--Dark-gray);
+    padding: 0.5em;
+    vertical-align: top; 
+  }
+  
+  
+  #pricing table,
+  #pricing table th,
+  #pricing table td {
+    border: 2px solid var(--Yellow);
+  }
+
+  #take-the-first-step {
+    background-color: var(--Pink);
+    padding: 1em; 
+  }
+  
+  #take-the-first-step p {
+    color: var(--White);
+  }
+  #take-the-first-step a{
+    display: block;
+    width: 75%;
+    margin: 1em auto;
+    background-color: var(--White);
+    color: var(--Dark-gray);
+    border-radius: 20px;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px rgba(0,0,0,1);
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; 
+    background-color: var(--Lavender);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 2em;
+    margin-bottom: 2em;
+  }
+
+  footer small, footer a {
+    color: var(--White);
+    font-size: small; 
+    text-align: center; 
+    font-weight: 500;  
+  }
+
+  
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 620px) {
+}
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media (min-width: 950px) {
+}
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media (min-width: 1280px) {
+
+}
