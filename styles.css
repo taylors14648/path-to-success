@@ -1,4 +1,4 @@
-/* -------------------- CSS BY NAME -------------------------------------- */
+/* -------------------- CSS BY Taylor Sherman -------------------------------------- */
 /* -------------------- IMPORTED FONTS -------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
 /*-------------------- CSS RESET --------------------------------------------------*/
@@ -166,10 +166,12 @@ html, body {
   #services, #pricing{
     padding: 1em;
   }
-  #services section section {
+  .service-card {
     background-color: var(--White);
-    border-radius: 20px;
-    padding: 1em;
+    border-radius: 15px;
+    padding: 1.5em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: auto;
     margin: 1em;
   }
 #why-choose-us {
@@ -283,27 +285,37 @@ html, body {
   .more-text {
     display: inline;
   }
-
+  .service-card {
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 1.5em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: auto;
+    margin:.5em;
+  }
 #One-on-One {
   display: grid;
   grid-template-columns: 1fr 1fr; 
+  gap:1em;
 }
-#group-coaching {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
+#One-on-One h3{
+  grid-column: 1 / -1; 
 }
-#personal-development {
+#One-on-One .service-card:nth-child(2) {
   grid-column: 1;
 }
 
-#career-coaching {
+#One-on-One .service-card:nth-child(3) {
   grid-column: 2;
 }
-
-#relationship-coaching {
-  grid-column: 1 / -1; 
+#One-on-One .service-card:nth-child(4) {
+  grid-column: 1 / -1;
 }
-
+#group-coaching ~ .service-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1em;
+}
 #why-choose-us ul {
   display: flex;
   justify-content: center;  
@@ -320,12 +332,12 @@ html, body {
 }
 
 .pricing-card {
+  
   text-align: center;
 }
 
 .pricing-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+
   text-align: left; 
 
 }
@@ -337,8 +349,118 @@ html, body {
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media (min-width: 950px) {
+  nav h2{
+    display: none;
+  }
+  nav ul{
+    display: flex;
+    position: fixed;
+    top:0px;
+    right:0px;
+    font-size: .75em;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    padding-left: 2em;
+    padding-right:2em;
+    background-color: var(--Yellow);
+    color: var(--Dark-gray);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 3;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 3em;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--Dark-gray);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1;
+  }
+.services-grid h3{
+  white-space: nowrap;
+  font-size: 1rem;
 }
+ 
+  #One-on-One,
+  #group-coaching,
+  #workshops-seminars,
+  #online {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .service-card {
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 1.5em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    width: auto;
+    min-width:250px;
+  }
+
+  .service-card img {
+    max-width: 80px;
+    height: auto;
+  }
+  #why-choose-us ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em; 
+    list-style: none; 
+    margin: 0;  
+    padding: 0;
+}
+#why-choose-us ul li {
+  padding: 2em;
+}
+nav a:hover {
+  color: var(--White);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1em; 
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: auto;
+}
+.pricing-card h3 {
+  font-size: 1.15em;
+  white-space: nowrap;
+  text-align: left; 
+}
+table {
+  max-width: 100%;
+}
+.First-step-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
+.First-step-content a{
+  max-width:50%;
+}
+}
+
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media (min-width: 1280px) {
-
+  body {
+    max-width: 90%; /* Limit width to 90% of the viewport */
+    margin: 0 auto; /* Center the page */
+  }
 }
