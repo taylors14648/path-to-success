@@ -311,11 +311,12 @@ html, body {
 #One-on-One .service-card:nth-child(4) {
   grid-column: 1 / -1;
 }
-#group-coaching ~ .service-card{
+#group-coaching .group-service-cards{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap:1em;
 }
+
 #why-choose-us ul {
   display: flex;
   justify-content: center;  
@@ -379,11 +380,12 @@ html, body {
   .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1;
   }
 .services-grid h3{
   white-space: nowrap;
   font-size: 1rem;
+  text-align: left;
+  margin: 10px;
 }
  
   #One-on-One,
@@ -393,15 +395,21 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    max-width: 100%;
   }
-
+  #group-coaching .group-service-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
   .service-card {
     background-color: var(--White);
     border-radius: 15px;
     padding: 1.5em;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    width: auto;
+    width: 50%;
     min-width:250px;
+    font-size: large;
   }
 
   .service-card img {
@@ -463,11 +471,9 @@ body {
 .services-grid,
 .pricing-grid {
   max-width: 90%; 
-  margin: 0 auto; 
 }
 
-.service-card,
-.pricing-card {
+.service-card {
   padding: 1em; 
 }
 }
