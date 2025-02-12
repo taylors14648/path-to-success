@@ -455,12 +455,45 @@ table {
 .First-step-content a{
   max-width:50%;
 }
+body {
+  font-size: 1.1em; 
+  overflow-x: hidden; 
+}
+
+.services-grid,
+.pricing-grid {
+  max-width: 90%; 
+  margin: 0 auto; 
+}
+
+.service-card,
+.pricing-card {
+  padding: 1em; 
+}
 }
 
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media (min-width: 1280px) {
   body {
-    max-width: 90%; /* Limit width to 90% of the viewport */
-    margin: 0 auto; /* Center the page */
+    max-width: 90%; 
+    margin: 0 auto; 
+  }
+  
+  body {
+    max-width: 90%;
+    font-size: 1em; 
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .services-grid,
+  .pricing-grid {
+    max-width: 1400px;
+  }
+
+  nav {
+    position: absolute;
+    right: 2em;
+    top: 1.5em;
   }
 }
